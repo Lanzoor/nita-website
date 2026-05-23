@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sawarabi+Gothic&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Teachers:ital,wght@0,400..800;1,400..800&display=swap');
+
+@font-face {
+    font-family: 'ITA Reskinned';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('/assets/fonts/ITA-Reskinned-Regular-2026-05-20-190552.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'ITA TO';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('/assets/fonts/ITA-Reskinned-T.O.-Ver.-Regular-2026-05-20-191350.otf') format('opentype');
+}
+
+@layer base, structure, page;
+
+@layer base {
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'Teachers', 'Noto Sans';
+        font-size: 30px;
+        font-weight: 300;
+        line-height: 1.5;
+    }
+
+    .ita {
+        font-family: 'ITA Reskinned', 'Noto Sans';
+    }
+
+    .jp {
+        font-family: 'Sawarabi Gothic';
+        font-size: 20px;
+    }
+
+    .dim {
+        opacity: 0.7;
+    }
+
+    section {
+        padding: 2% 20%;
+    }
+
+    section.centered {
+        text-align: center;
+    }
+
+    h1 {
+        margin: 0 0 20px 0;
+    }
+
+    :root {
+        --red: #f69200;
+
+        --green: #a6b727;
+
+        --yellow: #fec306;
+
+        --blue: #418ab3;
+    }
+
+    .col.red,
+    .col.red * {
+        color: var(--red) !important;
+    }
+
+    .col.green,
+    .col.green * {
+        color: var(--green) !important;
+    }
+
+    .col.yellow,
+    .col.yellow * {
+        color: var(--yellow) !important;
+    }
+
+    .col.blue,
+    .col.blue * {
+        color: var(--blue) !important;
+    }
+}

@@ -1,0 +1,11 @@
+@layer structure {
+    body {
+        font-family: 'ITA TO', 'Noto Sans';
+        background: #111;
+        color: #ddd;
+    }
+
+    section {
+        padding: 2% 20%;
+    }
+}
