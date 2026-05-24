@@ -18,9 +18,13 @@
     src: url('/assets/fonts/ITA-Reskinned-T.O.-Ver.-Regular-2026-05-20-191350.otf') format('opentype');
 }
 
-@layer base, structure, page;
+@layer base, structure, page, component;
 
 @layer base {
+    :root {
+        --font-primary: 'Teachers', 'Noto Sans';
+    }
+
     * {
         margin: 0;
         padding: 0;
@@ -28,23 +32,10 @@
     }
 
     body {
-        font-family: 'Teachers', 'Noto Sans';
+        font-family: var(--font-primary);
         font-size: 30px;
         font-weight: 300;
         line-height: 1.5;
-    }
-
-    .ita {
-        font-family: 'ITA Reskinned', 'Noto Sans';
-    }
-
-    .jp {
-        font-family: 'Sawarabi Gothic';
-        font-size: 20px;
-    }
-
-    .dim {
-        opacity: 0.7;
     }
 
     section {
@@ -55,18 +46,32 @@
         text-align: center;
     }
 
-    h1 {
-        margin: 0 0 20px 0;
-    }
-
     :root {
         --red: #f69200;
-
         --green: #a6b727;
-
         --yellow: #fec306;
-
         --blue: #418ab3;
+
+        --bg: #111;
+        --text: #ccc;
+
+        --text-bold: #ddd;
+
+        --anchor: #aaa;
+        --anchor-hover: #777;
+
+        --header: #ddd;
+
+        --th-bg: rgba(255, 255, 255, 0.15);
+        --hr-bg: #333;
+
+        --code-bg: #222;
+        --code-text: #ddd;
+
+        --debug-primary: rgb(255, 0, 0);
+        --debug-secondary: rgb(255, 129, 129);
+
+        --div-padding: 4%;
     }
 
     .col.red,
@@ -87,5 +92,105 @@
     .col.blue,
     .col.blue * {
         color: var(--blue) !important;
+    }
+
+    b,
+    strong {
+        font-weight: 600;
+
+        transition:
+            text-shadow 0.2s,
+            color 0.2s;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    th {
+        font-weight: 600;
+    }
+
+    h1 {
+        margin: 10px 0 20px 0;
+    }
+
+    hr {
+        border: none;
+        height: 5px;
+        background-color: var(--hr-bg);
+        border-radius: 2px;
+        margin: 10px 0;
+    }
+
+    section.no-padding {
+        padding: 0;
+    }
+
+    section.fixed-bg {
+        background-position: center center !important;
+        background-repeat: no-repeat !important;
+        background-size: cover !important;
+        background-attachment: fixed !important;
+    }
+
+    section.stretched {
+        min-height: calc(100vh);
+    }
+
+    a.plain {
+        text-decoration: none;
+        color: var(--text);
+    }
+
+    a:not(.plain) {
+        text-decoration: none;
+        display: inline-block;
+
+        color: var(--anchor);
+
+        transition: all 0.2s ease;
+    }
+
+    a:not(.plain):hover {
+        text-decoration: underline;
+        color: var(--anchor-hover);
+    }
+
+    .dim {
+        opacity: 0.7;
+    }
+
+    .ita {
+        font-family: 'ITA Reskinned', 'Noto Sans';
+    }
+
+    .jp {
+        font-family: 'Sawarabi Gothic';
+        font-size: 20px;
+    }
+
+    @media (max-width: 768px) {
+        body,
+        p,
+        blockquote,
+        a {
+            font-size: 15px;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-size: 30px;
+        }
+
+        section.fixed-bg {
+            background-attachment: scroll !important;
+        }
     }
 }

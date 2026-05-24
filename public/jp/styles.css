@@ -1,5 +1,5 @@
 @layer page {
-    body {
-        font-family: 'Sawarabi Gothic', 'Noto Sans';
+    :root {
+        --font-primary: 'Sawarabi Gothic', 'Noto Sans';
     }
 }
