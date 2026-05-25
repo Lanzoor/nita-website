@@ -3,11 +3,8 @@
         background: white;
     }
 
+
     #nita--intro {
-        display: flex;
-        flex-direction: row;
-        align-items: flex-start;
-        justify-content: space-between;
         gap: 10%;
 
         padding: 10%;
@@ -21,12 +18,11 @@
     }
 
     #nita--intro div {
-        width: 100%;
         text-align: right;
 
         padding: 4%;
+        max-width: none;
 
-        color: rgba(255, 255, 255, 0.8);
         background: rgba(0, 0, 0, 0.75);
         backdrop-filter: blur(4px);
 
@@ -34,7 +30,24 @@
         box-shadow: 0 20px 20px rgba(0, 0, 0, 0.5);
     }
 
-    #nita--intro div h2 {
+    #nita--ita {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
+        padding: 0;
+    }
+
+    .section-block {
+        background: rgba(0, 0, 0, 0.8);
+        color: rgba(255, 255, 255, 0.8);
+        max-width: 40%;
+        height: 100%;
+        text-align: left;
+        padding: 4%;
+    }
+
+    .section-block h2 {
         color: rgba(255, 255, 255, 0.6);
     }
 }

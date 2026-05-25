@@ -4,7 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+
+    <title>Welcome! | NITA Project</title>
+
+    <meta property="og:description"
+        content="A project aiming to teach Japanese kids English through the Initial Teaching Alphabet.">
+    <meta property="og:type" content="website">
 
     <link href="/styles/main.css" rel="stylesheet">
     <link href="/styles/frontpage.css" rel="stylesheet">
@@ -12,10 +17,10 @@
 
 <body>
     <main>
-        <section class="centered fixed-bg" id="nita--intro">
+        <section class="fixed-bg flex-between" id="nita--intro">
             <img src="/assets/nippon_initial_teaching_alphabet_small.png">
 
-            <div>
+            <div class="section-block">
                 <h2>Let's learn English phonetics the fun way!</h2>
                 <h1>Welcome to the
                     <span class="col blue">Nippon</span>
@@ -30,6 +35,32 @@
                     a variant of the English Alphabet designed to make
                     spelling a bit more <b>consistent</b> before handling the complex world of Traditional Orthography.
                 </p>
+            </div>
+        </section>
+        <section class="fixed-bg flex-between" id="nita--ita">
+            <div class="section-block">
+                <h1>What is ITA?</h1>
+
+                The Initial Teaching Alphabet is a writing system of English that represents the 44 sounds of spoken
+                English.
+            </div>
+
+            <div class="ita-display">
+                <div class="ita--vowels">
+                    <div class="ita--letter">
+                        <div class="ita--letter-name">
+                            a
+                        </div>
+
+                        <div class="ita--letter-pronunciation">
+                            /æ/
+                        </div>
+
+                        <div class="ita--letter-example">
+                            <u>a</u>pple
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     </main>

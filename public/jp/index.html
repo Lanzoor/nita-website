@@ -4,7 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+
+    <title>ようこそ！ | 日本初期教育書法プロジェクト</title>
+
+    <meta property="og:description" content="日本の子供たちに英語を教えることを目的としたプロジェクト">
+    <meta property="og:type" content="website">
 
     <link href="/styles/main.css" rel="stylesheet">
     <link href="/styles/frontpage.css" rel="stylesheet">
@@ -13,21 +17,49 @@
 
 <body>
     <main>
-        <section class="centered fixed-bg" id="nita--intro">
+        <section class="fixed-bg flex-between" id="nita--intro">
             <img src="/assets/nippon_initial_teaching_alphabet_small.png">
 
-            <div>
+            <div class="section-block">
                 <h2>英語の発音を楽しく学ぼう！</h2>
-                <h1>日本初期教育書法プロジェクトへようこそ</h1>
+                <h1>
+                    日本初期教育書法プロジェクトへようこそ
+                </h1>
 
                 <p>
                     日本初期教育書法プロジェクトは、日本の子供たちに英語を教えることを目的としたプロジェクトです。初期教育書法とは、英字の変形版で、複雑な正書法を扱う前に、綴りの一貫性を高めるように設計されています。
                 </p>
             </div>
         </section>
+        <section class="fixed-bg flex-between" id="nita--ita">
+            <div class="section-block">
+                <h1>ITAとは何ですか？</h1>
+
+                The Initial Teaching Alphabet is a writing system of English that represents the 44 sounds of spoken
+                English.
+            </div>
+
+            <div class="ita-display">
+                <div class="ita--vowels">
+                    <div class="ita--letter">
+                        <div class="ita--letter-name">
+                            a
+                        </div>
+
+                        <div class="ita--letter-pronunciation">
+                            /æ/
+                        </div>
+
+                        <div class="ita--letter-example">
+                            <u>a</u>pple
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
-    <script type="module" src="/out/pages/jp.js"></script>
+    <script type="module" src="/out/pages/welcome.js"></script>
 </body>
 
 </html>

@@ -10,14 +10,15 @@
 
         width: 100%;
 
-        padding: 24px 15%;
+        padding: 2%;
     }
 
     #top-panel img {
-        width: 20%;
+        max-width: 20%;
     }
 
     #top-panel nav {
+        flex: 1;
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -41,6 +42,7 @@
     }
 
     #top-panel button {
+        flex-shrink: 0;
         cursor: pointer;
 
         position: relative;
@@ -146,6 +148,77 @@
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     }
 
+    #bottom-navigation {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 5%;
+
+        padding: 2% 10%;
+        border-top: 5px solid #777;
+        background: rgba(235, 245, 255);
+        backdrop-filter: blur(12px);
+        border-top: 2px solid rgba(100, 160, 230, 0.3);
+        color: #445;
+    }
+
+    #bottom-navigation #project-info {
+        max-width: 50%;
+    }
+
+    #bottom-navigation #navigation {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 2%;
+    }
+
+    #bottom-navigation #navigation .small-header {
+        text-transform: uppercase;
+        font-weight: 600;
+    }
+
+    #bottom-navigation #navigation .navigation-group {
+        display: flex;
+        flex-direction: column;
+        gap: 1%;
+    }
+
+    #bottom-navigation #navigation .navigation-group a {
+        position: relative;
+
+        display: inline-block;
+        font-weight: 500;
+        color: #779;
+    }
+
+    #bottom-navigation #navigation .navigation-group a:hover {
+        text-decoration: none;
+        color: #557;
+    }
+
+    #bottom-navigation #navigation .navigation-group a::after {
+        content: '';
+        position: absolute;
+        bottom: 2px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background: #779;
+        transition: 0.5s ease;
+    }
+
+    #bottom-navigation #navigation .navigation-group a:hover::after {
+        width: 100%;
+        background: #557;
+    }
+
+    footer {
+        opacity: 0.9;
+        margin: 4% 0;
+    }
+
     @media (max-width: 1080px) {
         #top-panel {
             max-height: 20%;
@@ -153,6 +226,18 @@
 
         #top-panel nav a {
             font-size: 10px;
+        }
+
+        #top-panel nav {
+            display: none;
+        }
+
+        #bottom-navigation {
+            flex-direction: column;
+        }
+
+        #bottom-navigation #project-info {
+            max-width: none;
         }
     }
 }
