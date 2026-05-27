@@ -156,10 +156,9 @@
         gap: 5%;
 
         padding: 2% 10%;
-        border-top: 5px solid #777;
-        background: rgba(235, 245, 255);
+        background: radial-gradient(circle at top, rgb(202, 229, 255), transparent 50%), rgba(235, 245, 255);
         backdrop-filter: blur(12px);
-        border-top: 2px solid rgba(100, 160, 230, 0.3);
+        border-top: 5px solid rgb(149, 180, 215);
         color: #445;
     }
 

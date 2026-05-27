@@ -55,6 +55,15 @@
         flex-direction: row;
         align-items: flex-start;
         justify-content: space-between;
+        padding: 0;
+    }
+
+    section.flex-around {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-around;
+        padding: 0;
     }
 
     section.no-padding {
@@ -152,16 +161,44 @@
         color: var(--text);
     }
 
-    a:not(.plain) {
-        text-decoration: none;
+    a.link {
         display: inline-block;
+        margin: 0 20px;
+        text-decoration: none;
+        color: white;
+
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        white-space: nowrap;
+        gap: 20px;
+    }
+
+    a.link img {
+        width: 20px;
+    }
+
+    a.link:hover {
+        text-decoration: underline;
+    }
+
+    .links {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 50%;
+        margin: 2%;
+    }
+
+    a:not(.plain):not(.link) {
+        text-decoration: none;
 
         color: var(--anchor);
 
         transition: all 0.2s ease;
     }
 
-    a:not(.plain):hover {
+    a:not(.plain):not(.link):hover {
         text-decoration: underline;
         color: var(--anchor-hover);
     }
@@ -200,6 +237,7 @@
             background-attachment: scroll !important;
         }
     }
+
     /* ==================== Debug ==================== */
     /* make sure to comment out when pushing to production */
 

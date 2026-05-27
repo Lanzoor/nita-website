@@ -3,11 +3,8 @@
         background: white;
     }
 
-
     #nita--intro {
         gap: 10%;
-
-        padding: 10%;
 
         background: black;
         background-image: url('/assets/frontpage-bg1.jpg');
@@ -17,25 +14,22 @@
         width: 20%;
     }
 
-    #nita--intro div {
+    #nita--intro .image-block {
+        text-align: left;
+        padding: 4%;
+    }
+
+    #nita--intro .section-block {
         text-align: right;
 
-        padding: 4%;
+        /* padding: 4%;
         max-width: none;
 
         background: rgba(0, 0, 0, 0.75);
         backdrop-filter: blur(4px);
 
         border-radius: 20px;
-        box-shadow: 0 20px 20px rgba(0, 0, 0, 0.5);
-    }
-
-    #nita--ita {
-        display: flex;
-        flex-direction: row;
-        align-items: flex-start;
-        justify-content: space-between;
-        padding: 0;
+        box-shadow: 0 20px 20px rgba(0, 0, 0, 0.5); */
     }
 
     .section-block {
@@ -45,6 +39,7 @@
         height: 100%;
         text-align: left;
         padding: 4%;
+        backdrop-filter: blur(4px);
     }
 
     .section-block h2 {
